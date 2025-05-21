@@ -1,0 +1,41 @@
+/* Custom styles for animations and specific overrides */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    backdrop-filter: blur(10px);
+}
+
+.skill-bar div {
+    transition: width 1s ease-in-out;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Parallax effect for hero background */
+#hero {
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #hero {
+        background-attachment: scroll;
+    }
+    nav ul {
+        flex-direction: column;
+        space-y-4;
+    }
+}
